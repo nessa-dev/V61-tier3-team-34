@@ -39,6 +39,7 @@ export default function InterviewQuestionsPage() {
         body: JSON.stringify({
           sessionId: data.sessionId,
           extractedJob: data.extractedJob,
+          quantityPerCategory: data.quantityPerCategory,
         }),
       });
       const result = await res.json();
