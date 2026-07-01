@@ -47,9 +47,20 @@ By analyzing the responsibilities, required skills, and experience level in a jo
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in Supabase + Groq credentials
+cp .env.example .env.local   # fill in Supabase service-role + Groq credentials
 npm run dev
 ```
+
+Required local environment variables:
+
+```txt
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+GROQ_API_KEY=
+```
+
+`SUPABASE_SERVICE_ROLE_KEY` is server-only and must never be exposed in
+client-side code or `NEXT_PUBLIC_` variables.
 
 Set up the database by running `supabase/schema.sql` in the Supabase SQL editor for your project.
 
